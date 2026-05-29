@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+button,
+.card-size-dec,
+.contact a,
+.footer-icons-container a,
+.wishing-button-container,
+.timer-button-container,
+.gifts-card-main-text,
+.header-nav-list a,
+.burger-container,
+.slide-card-box {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h2 {
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --xwite: #F6F6F6;
+  --xgray: #CDCDCD;
+  --xdark-gray: #545454;
+  --xblack: #292929;
+  --kind-ligh: #FDDCC4;
+  --kind-dark: #F1CDB3;
+  --xradial: radial-gradient(#5B483A, #262425);
+  --georgia: Georgia sans-serif;
+  --arial: Arial sans-serif;
+}
