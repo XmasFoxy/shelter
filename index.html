@@ -12,16 +12,19 @@
   <header class="header">
     <section class="header-top">
       <div class="header-text-container">
-        <h1>Cozy House</h1>
+        <div class="relative-container">  
+          <h1>Cozy House</h1>
+          <a href="index.html" class="overlay-link"></a>
+        </div>
         <p>Shelter for pets in Boston</p>
       </div>
 
       <div class="header-list-container">
         <ul>
-          <li class="selected-list">About the shelter</li>
-          <li>Our pets</li>
-          <li>Help the shelter</li>
-          <li>Contacts</li>
+          <li class="selected-list"><a>About the shelter</a></li>
+          <li><a href="pets.html">Our pets</a></li>
+          <li><a href="#help">Help the shelter</a></li>
+          <li><a href="#contacts">Contacts</a></li>
         </ul>
       </div>
     </section>
@@ -39,8 +42,11 @@
           </p>
         </div>
 
-        <div class="header-article-button-container">
-          <button class="header-article-button color-button">Make a friend</button>
+        <div class="header-article-button-container relative-container">
+          <div>
+            <button class="header-article-button">Make a friend</button>
+            <a href="#friends" class="overlay-link"></a>
+          </div>  
         </div>
       </div>
 
@@ -51,7 +57,7 @@
   </header>
 
   <main class="main">
-    <section class="about">
+    <section class="about" id="about">
       <div class="about-img-container">
         <img src="src/img/about-pets.png" alt="a cat and a dog look at the screen together">
       </div>
@@ -80,16 +86,16 @@
       </div>
     </section>
 
-    <section class="looking">
+    <section class="looking" id="friends">
       <div class="looking-header-container">
         <h2>Our friends who
 are looking for a house</h2>
       </div>
 
       <div class="looking-cards-container">
-        <div class="looking-cards-left-arr-container">
+        <div class="looking-cards-left-arr-container active-nav">
           <button>
-            <img src="src/img/left-arr.svg" alt="a button to scroll pet cards to the left">
+            <img src="src/img/left-arr-act.svg">
           </button>
         </div>
 
@@ -137,19 +143,20 @@ are looking for a house</h2>
           </div>
         </div>
 
-        <div class="looking-cards-left-arr-container">
+        <div class="looking-cards-left-arr-container active-nav">
           <button>
-            <img src="src/img/right-arr.svg" alt="a button to scroll pet cards to the right">
+            <img src="src/img/right-arr-act.svg" alt="a button to scroll pet cards to the right">
           </button>
         </div>
       </div>
 
-      <div class="looking-main-button-container">
+      <div class="looking-main-button-container relative-cantainer"> 
         <button class="looking-main-button color-button">Get to know the rest</button>
+        <a href="pets.html" class="overlay-link"></a>
       </div>
     </section>
 
-    <section class="help">
+    <section class="help" id="help">
       <div class="help-header-container">
         <h2>How you can help our shelter</h2>
       </div>
@@ -266,7 +273,7 @@ are looking for a house</h2>
             <p>Name of the bank / Type of bank account</p>
           </div>
 
-          <div class="donation-article-bank-container color-button">
+          <div class="donation-article-bank-container relative-container">
             <div class="donation-article-bank-img-container">
               <img src="src/img/credit-card.svg" alt="an icon of a credit card">
             </div>
@@ -274,6 +281,7 @@ are looking for a house</h2>
             <div class="donation-article-bank-text-container">
               <p>8380 2880 8028 8791 7435</p>
             </div>
+            <a href="#" class="overlay-link"></a>
           </div>
 
           <div class="donation-article-additional-text-container">
@@ -289,13 +297,13 @@ are looking for a house</h2>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <div class="footer-questions-container">
       <div class="footer-questions-header-container">
         <h2>For questions ans suggestions</h2>
       </div>
 
-      <div class="footer-questions-email-conatiner">
+      <div class="footer-questions-email-conatiner relative-container">
         <div class="footer-questions-email-img-container">
           <img src="src/img/icon-email.svg" alt="an icon of an envelope">
         </div>
@@ -303,9 +311,10 @@ are looking for a house</h2>
         <div class="footer-questions-email-text-container">
           <p>email@shelter.com</p>
         </div>
+        <a href="mailto:email@shelter.com" class="overlay-link"></a>
       </div>
 
-      <div class="footer-questions-phone-conatiner">
+      <div class="footer-questions-phone-conatiner relative-container">
         <div class="footer-questions-phone-img-container">
           <img src="src/img/icon-phone.svg" alt="an icon of a telephone">
         </div>
@@ -313,6 +322,7 @@ are looking for a house</h2>
         <div class="footer-questions-email-text-container">
           <p>+13 674 567 75 54</p>
         </div>
+        <a href="tel:+136745677554" class="overlay-link"></a>
       </div>
     </div>
 
@@ -321,7 +331,7 @@ are looking for a house</h2>
         <h2>We are waiting for your visit</h2>
       </div>
 
-      <div class="footer-location-line-container">
+      <div class="footer-location-line-container relative-container">
         <div class="footer-location-line-img-container">
           <img src="src/img/icon-marker.svg" alt="an icon of a point of the map">
         </div>
@@ -329,9 +339,10 @@ are looking for a house</h2>
         <div class="footer-location-line-text-container">
           <p>1 Central Street, Boston (entrance from the store)</p>
         </div>
+        <a href="https://maps.google.com/?q=1+Central+Street,+Boston,+MA" class="overlay-link"></a>
       </div>
 
-      <div class="footer-location-line-container">
+      <div class="footer-location-line-container relative-container">
         <div class="footer-location-line-img-container">
           <img src="src/img/icon-marker.svg" alt="an icon of a point of the map">
         </div>
@@ -339,6 +350,7 @@ are looking for a house</h2>
         <div class="footer-location-line-text-container">
           <p>18 South Park, London</p>
         </div>
+        <a href="https://maps.google.com/?q=18+South+Park,+London" class="overlay-link"></a>
       </div>
     </div>
 
