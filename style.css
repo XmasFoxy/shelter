@@ -97,6 +97,14 @@ html {
     cursor: pointer;
     background-color: #FDDCC4;
   }
+
+  .burger-menu li:hover {
+    color: #FAFAFA;
+  }
+
+  .burger-container:hover {
+    cursor: pointer;
+  }
   
 }
 
@@ -106,6 +114,10 @@ body {
   font-family: var(--arial);
   background-color: #fff;
   overflow-x: hidden;
+}
+
+.body-disabled {
+  pointer-events: none;
 }
 
 h1 {
@@ -159,12 +171,6 @@ header {
   padding-bottom: 3px;
 }
 
-.selected-list {
-  color: #FAFAFA;
-  border-bottom: 3px solid #F1CDB3;
-  pointer-events: none;
-  cursor: default;
-}
 
 .header-bottom {
   display: flex;
@@ -222,10 +228,6 @@ header {
   font-family: var(--georgia);
 }
 
-.header-article-button {}
-
-.color-button {}
-
 .header-img-container {
   max-width: 698px;
   width: 100%;
@@ -272,6 +274,79 @@ header {
   background-color: #F1CDB3;
 }
 
+.active-burger {
+  pointer-events: auto;
+}
+
+.active-burger :first-child {
+  transform: translate(-12px, 12px) rotate(90deg);
+  transition: all 0.5s;
+}
+
+.active-burger :nth-child(2) {
+  transform: rotate(90deg);
+  transition: all 0.5s;
+}
+
+.active-burger :last-child {
+  transform: translate(12px, -12px) rotate(90deg);
+  transition: all 0.5s;
+}
+
+.burger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -100vw;
+  width: 320px;
+  background-color: #292929;
+  height: 100vh;
+  transition: all 0.6s;
+  pointer-events: auto;
+}
+
+.active-burger-menu {
+  right: 0;
+}
+
+.burger-menu ul {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.burger-menu li {
+  font-size: 32px;
+  color: #CDCDCD;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: auto;
+}
+
+.z-index0 {
+  z-index: -1;
+}
+
+
+.selected-list {
+  color: #FAFAFA !important;
+  border-bottom: 3px solid #F1CDB3;
+  pointer-events: none;
+  cursor: default;
+  padding-bottom: 5px;
+}
+
 @media (max-width: 732px) {
   .header-list-container {
     display: none;
@@ -279,6 +354,7 @@ header {
 
   .burger-container {
     display: flex;
+    z-index: 2;
   }
 }
 
@@ -301,10 +377,6 @@ header {
   }
 
 }
-
-
-
-.main {}
 
 .about {
   padding: var(--side-padding);
@@ -428,6 +500,7 @@ header {
 }
 
 .looking-cards-outer-flex {
+  overflow-x: hidden;
   max-width: 990px;
   width: 100%;
   display: flex;
